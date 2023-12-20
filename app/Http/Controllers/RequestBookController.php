@@ -52,13 +52,6 @@ class RequestBookController extends Controller
     }
 
 
-
-    public function editrequestbook(Request $request , $request_id){
-
-    }
-
-    public function deleterequestbook($request_id){
-
-    }
+ 
 
 }
