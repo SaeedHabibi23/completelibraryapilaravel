@@ -28,15 +28,8 @@ Route::post('/login' , [AuthController::class, 'login']);
 
 Route::group(['middleware' => ['auth:sanctum']] , function (){
 
-
-
     Route::get('/user' , [AuthController::class, 'user']);
 
-
-
-
-
-    
     Route::post('/addlibrary' , [LibraryController::class, 'addlibrary']);
     Route::get('/showlibrary' , [LibraryController::class, 'showlibrary']);
     Route::post('/editlibrary/{lib_id}' , [LibraryController::class, 'editlibrary']);
@@ -47,6 +40,7 @@ Route::group(['middleware' => ['auth:sanctum']] , function (){
     Route::post('/editcategori/{cat_id}' , [CategoriController::class, 'editcategori']);
     Route::delete('/deletecategori/{cat_id}' , [CategoriController::class, 'deletecategori']);
 
+    // books routes
 
     Route::post('/addbook' , [BookController::class, 'addbook']);
     Route::get('/showbook' , [BookController::class, 'showbook']);
